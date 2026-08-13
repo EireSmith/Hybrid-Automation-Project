@@ -11,8 +11,10 @@ Scripts
 ![EC2 Instances](screenshots/New%20instances.png)  
 *Initial EC2 Setup"*
 
+
+
  
-healthcheck.ps1
+## healthcheck.ps1
 
 Connects to each node in $nodes and pulls back:
 
@@ -29,7 +31,7 @@ pwsh -File .\healthcheck.ps1
 
 If a node is unreachable, it's still included in the output with a Status of FAILED and the error message.
 
-provision-user.ps1
+## provision-user.ps1
 
 Creates a service account (default: appsvc) on each node in $Nodes, if it doesn't already exist.
 
@@ -45,11 +47,11 @@ pwsh -File .\provision-user.ps1 -NewUser "deploysvc" -Nodes "nodex-ip","nodey-ip
 
 The script checks for the user with id -u before creating it, so it's safe to run more than once. existing users are skipped.
 
-Setup notes
+## Setup notes
 
 Both scripts have $nodes / $Nodes and $keyPath hardcoded near the top so edit before running. Node IPs will change if instances are stopped/started or replaced, so this list needs to be kept up to date.(I had issues with rotating IP addresses after reboot so be careful. Also make sure your own IP is up to date. Do not use your mobile hotspot as carriers use CGNAT making your visible IP unreliable.)
 
-Example output
+## Example output
 
 healthcheck.ps1:
 
