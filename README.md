@@ -1,6 +1,6 @@
 # Hybrid-Automation-Project
-Remote provision and checkups on Linux Servers hosted on EC2 using Powershell 7
-A couple of PowerShell 7 scripts for managing a small group of Linux EC2 instances over SSH using PowerShell's built-in Invoke-Command -HostName remoting
+
+A couple of PowerShell 7 scripts for managing a small group of Linux EC2 instances over SSH using PowerShell Invoke-Command -HostName remoting commands.
 
 Requirements
 PowerShell 7+ 
@@ -8,6 +8,10 @@ SSH access to the target nodes with a key pair
 OpenSSH client installed on the machine running the scripts
 Scripts
 
+![EC2 Instances](screenshots/New&20instances.png)  
+*Initial EC2 Setup"*
+
+ 
 healthcheck.ps1
 
 Connects to each node in $nodes and pulls back:
