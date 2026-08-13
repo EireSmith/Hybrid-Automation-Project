@@ -8,7 +8,7 @@ SSH access to the target nodes with a key pair
 OpenSSH client installed on the machine running the scripts
 Scripts
 
-![EC2 Instances](screenshots/New&20instances.png)  
+![EC2 Instances](screenshots/New%20instances.png)  
 *Initial EC2 Setup"*
 
  
